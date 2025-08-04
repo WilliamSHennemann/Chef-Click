@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Copa do Mundo de Clubes</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="login.css">
 </head>
 <body>
  <div class="cabeçario">
@@ -35,20 +35,27 @@
     </nav>
 
 </div>
+
 <main class="principal">
-    <h2>Recomendado</h2>
-    <div class="Recomendado">
-      <button class="flecha esquerda">&lt;</button>
-      <div class="molduras">
-        <a href="Produto.html" class="moldura moldura-1"><div class="img"></div><p>Text<br><strong>$0</strong><br>Body text.</p></a>
-        <a href="Produto.html" class="moldura moldura-2"><div class="img"></div><p>Text<br><strong>$0</strong><br>Body text.</p></a>
-        <a href="Produto.html" class="moldura moldura-3"><div class="img"></div><p>Text<br><strong>$0</strong><br>Body text.</p></a>
-        <a href="Produto.html" class="moldura moldura-4"><div class="img"></div><p>Text<br><strong>$0</strong><br>Body text.</p></a>
-        <a href="Produto.html" class="moldura moldura-5"><div class="img"></div><p>Text<br><strong>$0</strong><br>Body text.</p></a>
-        <a href="Produto.html" class="moldura moldura-6"><div class="img"></div><p>Text<br><strong>$0</strong><br>Body text.</p></a>
+    <h2>LOGIN</h2>
+    <form class="form-cadastro">
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" placeholder="Insira aqui seu Nome...">
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Insira aqui seu Email...">
+
+      <label for="senha">Senha</label>
+      <input type="password" id="senha" placeholder="Insira aqui sua Senha...">
+
+      <div class="checkbox-container">
+        <input type="checkbox" id="lembrar">
+        <label for="lembrar" class="label-checkbox">Lembre de mim</label>
       </div>
-      <button class="flecha direita">&gt;</button>
-    </div>
+
+      <button type="submit" class="botao-registrar botao-login">Logar</button>
+      <a href="cadastro.html" class="botao-registra">Registrar</a>
+    </form>
   </main>
 
   <footer class="footer">

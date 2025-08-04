@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Copa do Mundo de Clubes</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="cadastro.css">
 </head>
 <body>
  <div class="cabeçario">
@@ -36,20 +36,32 @@
 
 </div>
 <main class="principal">
-    <h2>Recomendado</h2>
-    <div class="Recomendado">
-      <button class="flecha esquerda">&lt;</button>
-      <div class="molduras">
-        <a href="Produto.html" class="moldura moldura-1"><div class="img"></div><p>Text<br><strong>$0</strong><br>Body text.</p></a>
-        <a href="Produto.html" class="moldura moldura-2"><div class="img"></div><p>Text<br><strong>$0</strong><br>Body text.</p></a>
-        <a href="Produto.html" class="moldura moldura-3"><div class="img"></div><p>Text<br><strong>$0</strong><br>Body text.</p></a>
-        <a href="Produto.html" class="moldura moldura-4"><div class="img"></div><p>Text<br><strong>$0</strong><br>Body text.</p></a>
-        <a href="Produto.html" class="moldura moldura-5"><div class="img"></div><p>Text<br><strong>$0</strong><br>Body text.</p></a>
-        <a href="Produto.html" class="moldura moldura-6"><div class="img"></div><p>Text<br><strong>$0</strong><br>Body text.</p></a>
-      </div>
-      <button class="flecha direita">&gt;</button>
+  <h2>CADASTRO</h2>
+  <form class="form-cadastro">
+    <label for="nome">Nome</label>
+    <input type="text" id="nome" placeholder="Insira aqui seu Nome...">
+
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="Insira aqui seu Email...">
+
+    <label for="senha">Senha</label>
+    <input type="password" id="senha" placeholder="Insira aqui sua Senha...">
+
+    <label for="confirmar-senha">Confirme a Senha</label>
+    <input type="password" id="confirmar-senha" placeholder="Insira aqui sua Senha...">
+
+    <div class="checkbox-container">
+      <input type="checkbox" id="aceito">
+      <label for="aceito" class="label-checkbox">
+        <strong>Aceito</strong><br>
+        <small>Você aceita receber notificações de Desconto e novidades no seu email</small>
+      </label>
     </div>
-  </main>
+
+    <button type="submit" class="botao-registrar">Registrar-se</button>
+    <a href="login.html" class="botao-logar">Logar</a>
+  </form>
+</main>
 
   <footer class="footer">
     <div class="coluna">

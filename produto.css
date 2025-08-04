@@ -105,50 +105,55 @@ body {
 
 /* ---------- CONTEÚDO PRINCIPAL ---------- */
 
-.principal {
-  padding: 2vmin;
-}
-
-.Recomendado {
+.detalhes-produto {
   display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  gap: 1vmin;
-  overflow-x: auto;
-  margin-top: 2vmin;
-}
-
-.flecha {
-  background: none;
-  border: none;
-  font-size: 4vmin;
-  cursor: pointer;
-}
-
-.molduras {
-  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 2vmin;
   padding: 2vmin;
-  justify-content: center;
 }
 
-.moldura {
-  background-color: #f9f9f9;
-  border: 1px solid #ccc;
-  border-radius: 1vmin;
-  padding: 1vmin;
-  text-align: center;
-  width: 100%; 
-  height: auto;
-  text-decoration: none;
-  color: black;
+.coluna-esquerda {
+  display: flex;
+  flex-direction: column;
+  gap: 2vmin;
 }
 
-.img {
-  width: 100%;
+.imagem-produto {
+  width: 40%;
   aspect-ratio: 1 / 1;
   background-color: #eee;
-  margin-bottom: 1vmin;
+  border: 2px solid black;
+  border-radius: 2vmin;
+}
+
+.preco {
+  font-size: 2.5vmin;
+  font-weight: bold;
+}
+
+.botao-comprar {
+  padding: 1.5vmin 4vmin;
+  font-size: 2vmin;
+  border: none;
+  background-color: #333;
+  color: white;
+  border-radius: 1vmin;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.coluna-direita {
+  border-left: 1px solid black;
+  padding-left: 3vmin;
+}
+
+.coluna-direita h2 {
+  font-size: 3vmin;
+  margin-bottom: 2vmin;
+}
+
+.coluna-direita p {
+  font-size: 2vmin;
 }
 
 .footer {
@@ -165,56 +170,26 @@ body {
   max-width: 50%;
 }
 
-/* RESPONSIVO */
+/* ---------- RESPONSIVIDADE ---------- */
 
-@media (max-width: 480px) {
-  .molduras {
-    grid-template-columns: repeat(1, 1fr);
+@media (max-width: 768px) {
+  .detalhes-produto {
+    grid-template-columns: 1fr;
+    padding: 2vmin;
   }
 
-  .moldura-2,
-  .moldura-3,
-  .moldura-4,
-  .moldura-5,
-  .moldura-6 {
-    display: none;
-  }
-}
-
-/* Celular médio (2 cards visíveis) */
-@media (min-width: 481px) and (max-width: 767px) {
-  .molduras {
-    grid-template-columns: repeat(2, 1fr);
+  .coluna-direita {
+    border-left: none;
+    padding-left: 0;
+    margin-top: 3vmin;
   }
 
-  .moldura-3,
-  .moldura-4,
-  .moldura-5,
-  .moldura-6 {
-    display: none;
-  }
-}
-
-/* Tablet (3 cards visíveis) */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .molduras {
-    grid-template-columns: repeat(3, 1fr);
+  .imagem-produto {
+    width: 100%;
   }
 
-  .moldura-4,
-  .moldura-5,
-  .moldura-6 {
-    display: none;
-  }
-}
-
-/* Desktop (6 cards visíveis lado a lado) */
-@media (min-width: 1024px) {
-  .molduras {
-    grid-template-columns: repeat(6, 1fr);
-  }
-
-  .moldura {
-    display: block;
+  .botao-comprar {
+    width: 100%;
+    text-align: center;
   }
 }

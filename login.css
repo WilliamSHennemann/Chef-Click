@@ -65,6 +65,7 @@ body {
 .login-cadastro {
   display: flex;
   gap: 1vmin;
+  text-decoration: none;
 }
 
 .login-cadastro button {
@@ -77,14 +78,12 @@ body {
 .Login {
   background-color: black;
   color: white;
-  text-decoration: none;
 }
 
 .Cadastro {
   background-color: white;
   color: black;
   border: 1px solid black;
-  text-decoration: none;
 }
 
 /* ---------- MENU ---------- */
@@ -109,46 +108,56 @@ body {
   padding: 2vmin;
 }
 
-.Recomendado {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
+
+.form-cadastro {
+  display: flex;
+  flex-direction: column;
+  max-width: 50vmax;
+  width: 100%;
+  margin: 0 auto;
+  gap: 1.5vmin;
+}
+
+.form-cadastro input {
+  padding: 1.5vmin;
+  border-radius: 1vmin;
+  border: 1px solid #ccc;
+  font-size: 2vmin;
+}
+
+.checkbox-container {
+  display: flex;
   align-items: center;
   gap: 1vmin;
-  overflow-x: auto;
-  margin-top: 2vmin;
+  margin-top: 1vmin;
 }
 
-.flecha {
-  background: none;
+.label-checkbox {
+  font-size: 2vmin;
+}
+
+.botao-login {
+  background-color: #222;
+  color: white;
+  font-size: 2vmin;
+  border-radius: 0.5vmin;
+  padding: 1.5vmin;
   border: none;
-  font-size: 4vmin;
+  margin-top: 2vmin;
   cursor: pointer;
-}
-
-.molduras {
-  display: grid;
-  gap: 2vmin;
-  padding: 2vmin;
-  justify-content: center;
-}
-
-.moldura {
-  background-color: #f9f9f9;
-  border: 1px solid #ccc;
-  border-radius: 1vmin;
-  padding: 1vmin;
-  text-align: center;
-  width: 100%; 
-  height: auto;
-  text-decoration: none;
-  color: black;
-}
-
-.img {
   width: 100%;
-  aspect-ratio: 1 / 1;
-  background-color: #eee;
-  margin-bottom: 1vmin;
+}
+
+.botao-registra {
+  margin: 2vmin auto 0 auto;
+  padding: 1vmin 2vmin;
+  background-color: #e5d5ff;
+  border: none;
+  border-radius: 2vmin;
+  font-size: 2vmin;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .footer {
@@ -163,58 +172,4 @@ body {
 
 .footer .coluna {
   max-width: 50%;
-}
-
-/* RESPONSIVO */
-
-@media (max-width: 480px) {
-  .molduras {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .moldura-2,
-  .moldura-3,
-  .moldura-4,
-  .moldura-5,
-  .moldura-6 {
-    display: none;
-  }
-}
-
-/* Celular médio (2 cards visíveis) */
-@media (min-width: 481px) and (max-width: 767px) {
-  .molduras {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .moldura-3,
-  .moldura-4,
-  .moldura-5,
-  .moldura-6 {
-    display: none;
-  }
-}
-
-/* Tablet (3 cards visíveis) */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .molduras {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .moldura-4,
-  .moldura-5,
-  .moldura-6 {
-    display: none;
-  }
-}
-
-/* Desktop (6 cards visíveis lado a lado) */
-@media (min-width: 1024px) {
-  .molduras {
-    grid-template-columns: repeat(6, 1fr);
-  }
-
-  .moldura {
-    display: block;
-  }
 }
